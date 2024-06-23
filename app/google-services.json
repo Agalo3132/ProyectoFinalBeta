@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "743634562138",
+    "project_id": "fatenexus-78cba",
+    "storage_bucket": "fatenexus-78cba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743634562138:android:9419479d92cf07ab28fc63",
+        "android_client_info": {
+          "package_name": "com.example.proyectofinal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCa00ClzuPdQka2Ljh0bCpNCbCZHk2bwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

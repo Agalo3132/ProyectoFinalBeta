@@ -343,3 +343,7 @@ Japp/src/main/java/com/example/proyectofinal/adapter/CraftEssenceAdapter.kt,d\9
 Xapp/src/main/java/com/example/proyectofinal/ui/gamedata/data/CraftEssenceInfoFragment.kt,8\a\8a745ee174576ead57ae3d655e30e4e7f105b402
 ‰
 Yapp/src/main/java/com/example/proyectofinal/ui/gamedata/data/CraftEssenceInfoViewModel.kt,8\a\8a7491f54d4fa87fb973b911a5ec64502cd5d214
+H
+app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
+@
+build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d

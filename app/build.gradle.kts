@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id ("kotlin-kapt")
     id("kotlin-parcelize")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -62,6 +63,11 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     kapt (libs.androidx.room.compiler)
     implementation (libs.androidx.lifecycle.common.java8)
+    //implementation(libs.firebase.bom)
+
+    implementation("com.google.firebase:firebase-auth-ktx")
+
+    implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
