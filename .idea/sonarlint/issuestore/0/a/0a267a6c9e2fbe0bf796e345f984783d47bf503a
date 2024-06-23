@@ -1,0 +1,5 @@
+
+|kotlin:S6619M"7Remove this useless non-null check, it always succeeds.(σθƒ8©‰Β‚2J$a0c1a95c-1a77-48f1-8618-0e0d9e45e32d
+ikotlin:S125"Remove this commented out code.(¶©ώÿÿÿÿÿ8ψ‹Β±„2J$94137cd7-b078-4a32-95fb-8babe61b46db
+ kotlin:S1192t"[Define a constant instead of duplicating this literal "Error de acceso a Internet" 4 times.(ΐΟ³8†Β±„2J$d23c73f3-79db-42c1-97e4-4e6ee2b59130
+‚kotlin:S6511P"=Merge chained "if" statements into a single "when" statement.(¬¨Β§8–©‰Β‚2J$db3f2467-66d2-4997-b778-e7fc91326e59

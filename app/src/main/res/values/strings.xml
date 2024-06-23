@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ProyectoFinal</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="game_data">Game Data</string>
+    <string name="title_activity_ejemplo">EjemploActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="personajes">Personajes</string>
+    <string name="servants">Servants</string>
+    <string name="title_activity_data">DataActivity</string>
+    <string name="title_activity_servant_info">ServantInfoActivity</string>
+</resources>

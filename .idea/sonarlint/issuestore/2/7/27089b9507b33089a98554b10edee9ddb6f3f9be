@@ -1,0 +1,5 @@
+
+hkotlin:S125"Remove this commented out code.( æóŠýÿÿÿÿ8õ“åŒ„2J$1ca367ba-5157-46ab-8f41-fc9c34ff8777
+akotlin:S6310"Avoid hardcoded dispatchers.(•Þæ£8æ¢áŒ„2J$3ff00d04-e353-4010-8c08-90f1e841c238
+pkotlin:S6311"QRemove this dispatcher. It is pointless when used with only suspending functions.(•Þæ£8À¦Ñ³„2
+_kotlin:S1128"Remove this unused import.(ÅâÊ¸8ú“åŒ„2J$447e2fae-8662-423f-97ee-3f972aca94f1

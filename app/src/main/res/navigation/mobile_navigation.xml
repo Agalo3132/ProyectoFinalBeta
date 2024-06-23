@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.proyectofinal.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_gameData"
+        android:name="com.example.proyectofinal.ui.gamedata.GamedataFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_gamedata" >
+        <action
+            android:id="@+id/action_navigation_gameData_to_servantInfoFragment"
+            app:destination="@id/servantInfoFragment" />
+        <action
+            android:id="@+id/action_navigation_gameData_to_commandCodeInfoFragment"
+            app:destination="@id/commandCodeInfoFragment" />
+        <action
+            android:id="@+id/action_navigation_gameData_to_craftEssenceInfoFragment"
+            app:destination="@id/craftEssenceInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.proyectofinal.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/servantInfoFragment"
+        android:name="com.example.proyectofinal.ui.gamedata.data.ServantInfoFragment"
+        android:label="fragment_servant_info"
+        tools:layout="@layout/fragment_servant_info" >
+        <action
+            android:id="@+id/action_servantInfoFragment_to_navigation_gameData"
+            app:destination="@id/navigation_gameData" />
+        <action
+            android:id="@+id/action_servantInfoFragment_to_servantFullInfoFragment"
+            app:destination="@id/servantFullInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/servantFullInfoFragment"
+        android:name="com.example.proyectofinal.ui.gamedata.data.fullInfo.ServantFullInfoFragment"
+        android:label="fragment_servant_full_info"
+        tools:layout="@layout/fragment_servant_full_info" >
+        <action
+            android:id="@+id/action_servantFullInfoFragment_to_servantInfoFragment"
+            app:destination="@id/servantInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commandCodeInfoFragment"
+        android:name="com.example.proyectofinal.ui.gamedata.data.CommandCodeInfoFragment"
+        android:label="fragment_command_code_info"
+        tools:layout="@layout/fragment_command_code_info" >
+        <action
+            android:id="@+id/action_commandCodeInfoFragment_to_navigation_gameData"
+            app:destination="@id/navigation_gameData" />
+    </fragment>
+    <fragment
+        android:id="@+id/craftEssenceInfoFragment"
+        android:name="com.example.proyectofinal.ui.gamedata.data.CraftEssenceInfoFragment"
+        android:label="fragment_craft_essence_info"
+        tools:layout="@layout/fragment_craft_essence_info" >
+        <action
+            android:id="@+id/action_craftEssenceInfoFragment_to_navigation_gameData"
+            app:destination="@id/navigation_gameData" />
+    </fragment>
+</navigation>
