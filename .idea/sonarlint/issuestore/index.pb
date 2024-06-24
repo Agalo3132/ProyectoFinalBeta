@@ -365,3 +365,5 @@ u
 Eapp/src/main/java/com/example/proyectofinal/ui/login/AyudaActivity.kt,8\e\8e8043fd197af36d3d55bff5a732186a6e27a56b
 x
 Happ/src/main/java/com/example/proyectofinal/ui/login/AcercaDeActivity.kt,2\c\2c90b4e7880897a1cb3624dcedddcf7892ef0568
+v
+Fapp/src/main/java/com/example/proyectofinal/ui/login/PerfilActivity.kt,a\b\ab904648c2e5e428398708837e8bdffe206b5476
