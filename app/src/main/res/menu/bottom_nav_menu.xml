@@ -2,17 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/btProfile"
-        android:title="Perfil Personal" />
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
     <item
-        android:id="@+id/btAyuda"
-        android:title="Ayuda" />
-
+        android:id="@+id/navigation_gameData"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Game Data" />
     <item
-        android:id="@+id/item_logout"
-        android:title="Logout" />
-    <item
-        android:id="@+id/btAcercaDe"
-        android:title="Acerca De" />
-
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="Notifications" />
 </menu>

@@ -367,3 +367,11 @@ x
 Happ/src/main/java/com/example/proyectofinal/ui/login/AcercaDeActivity.kt,2\c\2c90b4e7880897a1cb3624dcedddcf7892ef0568
 v
 Fapp/src/main/java/com/example/proyectofinal/ui/login/PerfilActivity.kt,a\b\ab904648c2e5e428398708837e8bdffe206b5476
+œ
+lapp/src/main/java/com/example/proyectofinal/model/fullInfo/servantImage/random/RespuestaImagenServantItem.kt,3\b\3b54910c4ef415d287fa90d146f50f57960501ae
+Ž
+^app/src/main/java/com/example/proyectofinal/model/fullInfo/servantImage/random/NarrowFigure.kt,d\e\dee00032e37b4c3a136f34bb00247809cb310f85
+”
+dapp/src/main/java/com/example/proyectofinal/model/fullInfo/servantImage/random/NarrowFigureChange.kt,a\3\a3ec76331616e708dde0adad778c86a16683ceb7
+Œ
+\app/src/main/java/com/example/proyectofinal/model/fullInfo/servantImage/random/CharaGraph.kt,c\5\c52bb3fe400441a8adc3fc21d6084a2fd17dbd3c
