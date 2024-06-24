@@ -1,6 +1,8 @@
 package com.example.proyectofinal.utils
 
+import android.content.Context
 import android.widget.ImageView
+import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.example.proyectofinal.R
 
@@ -18,4 +20,12 @@ fun cargaImagen(ivImagen: ImageView, uri:String) {
         .error(R.drawable.ic_error)
         //donde colocamos la imagen
         .into(ivImagen);
+}
+
+fun showError(context: Context, message: String) {
+    AlertDialog.Builder(context).apply {
+        setTitle("Error")
+        setMessage(message)
+        setPositiveButton("Accept", null)
+    }.show()
 }

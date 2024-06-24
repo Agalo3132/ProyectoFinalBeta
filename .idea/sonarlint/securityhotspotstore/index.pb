@@ -1,6 +1,4 @@
 
-k
-;app/src/main/java/com/example/proyectofinal/MainActivity.kt,c\a\cafe85c77a3e15fc20f620001641a65cf8d25886
 {
 Kapp/src/main/java/com/example/proyectofinal/ui/gamedata/GamedataFragment.kt,9\c\9c2bc270ecf3a6745617747755858f06746847f4
 |
@@ -347,3 +345,19 @@ H
 app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
 @
 build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
+u
+Eapp/src/main/java/com/example/proyectofinal/ui/login/LoginActivity.kt,4\c\4cff165ea7d7105d4ca29d209378e5b2ef03f30d
+t
+Dapp/src/main/java/com/example/proyectofinal/ui/login/MainActivity.kt,4\f\4fee4f9a679c62e23e398718657c1a6a00fd2523
+x
+Happ/src/main/java/com/example/proyectofinal/ui/login/RegisterActivity.kt,a\a\aaee713122dcabc0e4196d6e03c570413d222909
+r
+Bapp/src/main/java/com/example/proyectofinal/adapter/PostAdapter.kt,8\8\8836ee7b26ce1627e8c4841101d253eb2e637730
+k
+;app/src/main/java/com/example/proyectofinal/adapter/Post.kt,4\2\427f7a04d0ec3cf59f452726f94d46043103143e
+z
+Japp/src/main/java/com/example/proyectofinal/ui/login/CreatePostActivity.kt,7\e\7e362d3dbd34de057e7371a44e4ac0eeb7e8254c
+w
+Gapp/src/main/java/com/example/proyectofinal/ui/login/WelcomeActivity.kt,5\b\5b0b00a1c7b5d39b3d99627d7540c98e50c8ddb1
+}
+Mapp/src/main/java/com/example/proyectofinal/adapter/ServantFullInfoAdapter.kt,7\d\7da039502f0bc687adf741e3e1422cf74e77d15b

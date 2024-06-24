@@ -32,7 +32,7 @@ import kotlinx.serialization.json.Json
 import java.lang.StringBuilder
 
 //QUITAR SI NO VA EL CLICKLISTENER
-class ServantInfoFragment : Fragment() {
+class ServantInfoFragment : Fragment(), ServantAdapter.OnItemClickListener {
 
     private var _binding: FragmentServantInfoBinding? = null
     private val binding get() = _binding!!
@@ -106,11 +106,15 @@ class ServantInfoFragment : Fragment() {
         setupRecyclerView()
         observeViewModel()
 
+
         /**
         binding.rvServants.setOnClickListener {
             findNavController().navigate(R.id.action_servantInfoFragment_to_servantFullInfoFragment)
         }
         **/
+
+
+
 
     }
 
@@ -122,7 +126,7 @@ class ServantInfoFragment : Fragment() {
 
     private fun setupRecyclerView() {
         binding.rvServants.layoutManager = LinearLayoutManager(context)
-        servantAdapter = ServantAdapter(emptyList()) //QUITAR EL THIS SI NO VA
+        servantAdapter = ServantAdapter(emptyList(), this) //QUITAR EL THIS SI NO VA
         binding.rvServants.adapter = servantAdapter
 
 
@@ -142,5 +146,11 @@ class ServantInfoFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    override fun onItemClick() {
+        findNavController().navigate(R.id.action_servantInfoFragment_to_servantFullInfoFragment)
+    }
+
+
 
 }

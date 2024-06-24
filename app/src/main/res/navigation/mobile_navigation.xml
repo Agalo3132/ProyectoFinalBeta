@@ -71,4 +71,28 @@
             android:id="@+id/action_craftEssenceInfoFragment_to_navigation_gameData"
             app:destination="@id/navigation_gameData" />
     </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.proyectofinal.ui.login.MainActivity"
+        android:label="MainActivity" />
+    <activity
+        android:id="@+id/createPostActivity"
+        android:name="com.example.proyectofinal.ui.login.CreatePostActivity"
+        android:label="activity_create_post"
+        tools:layout="@layout/activity_create_post" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.proyectofinal.ui.login.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.example.proyectofinal.ui.login.RegisterActivity"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
+    <activity
+        android:id="@+id/welcomeActivity"
+        android:name="com.example.proyectofinal.ui.login.WelcomeActivity"
+        android:label="activity_welcome"
+        tools:layout="@layout/activity_welcome" />
 </navigation>

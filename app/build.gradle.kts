@@ -61,11 +61,13 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.preference)
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.androidx.activity)
+    implementation(libs.firebase.firestore.ktx)
     kapt (libs.androidx.room.compiler)
     implementation (libs.androidx.lifecycle.common.java8)
     //implementation(libs.firebase.bom)
-
-    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.auth.ktx)
 
     implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
     testImplementation(libs.junit)

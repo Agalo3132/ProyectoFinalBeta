@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -14,7 +15,7 @@ import com.example.proyectofinal.databinding.ItemServantBinding
 import com.example.proyectofinal.model.basicInfo.servant.Servant
 
 //SI NO VA QUITAR EL LISTENER -> UNIT
-class ServantAdapter (private var servants: List<Servant>) : RecyclerView.Adapter<ServantAdapter.ServantViewHolder>() {
+class ServantAdapter (private var servants: List<Servant>, private val listener: OnItemClickListener) : RecyclerView.Adapter<ServantAdapter.ServantViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ServantViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_servant, parent, false)
@@ -25,12 +26,14 @@ class ServantAdapter (private var servants: List<Servant>) : RecyclerView.Adapte
     lateinit var listaServant: List<Servant>
     lateinit var servantAdapter: ServantAdapter
 
-
+    interface OnItemClickListener {
+        fun onItemClick()
+    }
 
     override fun onBindViewHolder(holder: ServantViewHolder, position: Int) {
         //VOVLER A ESTO SI NO VA
         val servant = servants[position]
-        holder.bind(servant)
+        holder.bind(servant, listener)
 
         //QUITAR SI NO VA
         //holder.bind(servants[position], clickListener)
@@ -58,28 +61,12 @@ class ServantAdapter (private var servants: List<Servant>) : RecyclerView.Adapte
         private var str: String? = null
 
 
-        fun comprobarRareza(servant: Servant) {
-            if (servant.rarity == 4) {
-               str = "SR";
-            } else if (servant.rarity == 5) {
-                str = "SSR";
-            } else {
-                str = "R";
-            }
-
-        }
-
-
         //QUITAR clickListener si no va
-        fun bind(servant: Servant) {
-            val estrellas = comprobarRareza(servant)
+        fun bind(servant: Servant, listener: OnItemClickListener) {
 
-            //QUITAR SI NO VA
-            //itemView.setOnClickListener { clickListener.onItemClick(servant) }
 
             nameTextView.text = servant.name
             rarityTextView.text = servant.rarity.toString()
-            //rarityTextView.text = servant.rarity.toString() + estrellas.toString()
             classTextView.text = servant.className
             collectionNoTextView.text = servant.collectionNo.toString()
 
@@ -92,20 +79,10 @@ class ServantAdapter (private var servants: List<Servant>) : RecyclerView.Adapte
                     .into(imageView)
             }
 
-            Log.d("ServantAdapter", "Loading image: ${servant.imageUrl}")
 
-
-            /**
-            servant.imageUrl?.let { url ->
-                Glide.with(itemView.context)
-                    .load(servant.imageUrl)
-                    .placeholder(R.drawable.ic_download)
-                    .error(R.drawable.ic_error)
-                    .into(imageView)
-            } ?: imageView.setImageResource(R.drawable.ic_error)
-            **/
-
-
+            itemView.setOnClickListener {
+                listener.onItemClick()
+            }
 
 
         }

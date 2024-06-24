@@ -7,8 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.proyectofinal.R
+import com.example.proyectofinal.adapter.ServantAdapter
+import com.example.proyectofinal.adapter.ServantFullInfoAdapter
+import com.example.proyectofinal.databinding.FragmentServantFullInfoBinding
+import com.example.proyectofinal.databinding.FragmentServantInfoBinding
 import com.example.proyectofinal.model.basicInfo.servant.Servant
+import com.example.proyectofinal.ui.gamedata.data.ServantInfoViewModel
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
@@ -16,18 +23,12 @@ class ServantFullInfoFragment : Fragment() {
 
     private lateinit var servant: Servant
 
-
-    companion object {
-        fun newInstance() = ServantFullInfoFragment()
-    }
-
+    private var _binding: FragmentServantFullInfoBinding? = null
+    private val binding get() = _binding!!
     private val viewModel: ServantFullInfoViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // TODO: Use the ViewModel
-    }
+    private lateinit var servantAdapter: ServantFullInfoAdapter
+    private lateinit var servantsList: List<Servant>
+    private lateinit var servants: Servant
 
 
 
@@ -35,21 +36,41 @@ class ServantFullInfoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_servant_full_info, container, false)
+        _binding = FragmentServantFullInfoBinding.inflate(inflater, container, false)
+
+
+
+
+
+        return binding.root
     }
 
-    //NO SE SI VA PERO NO SE
-    /**
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val servantJson = arguments?.getString("selected_servant") ?: return
-        servant = Json.decodeFromString(servantJson)
+        setupRecyclerView()
+        observeViewModel()
 
-        view.findViewById<TextView>(R.id.tvServantFullInfoName).text = servant.name
-        view.findViewById<TextView>(R.id.tvServantFullInfoId).text = servant.id.toString()
-        // Establece otras propiedades del sirviente en las vistas respectivas
+
     }
-    **/
+
+    private fun setupRecyclerView() {
+        binding.rvFullInfoServants.layoutManager = LinearLayoutManager(context)
+        servantAdapter = ServantFullInfoAdapter(emptyList())
+        binding.rvFullInfoServants.adapter = servantAdapter
+
+
+    }
+
+
+    private fun observeViewModel() {
+        viewModel.servantsLiveData.observe(viewLifecycleOwner, Observer { servants ->
+            servantAdapter.updateServants(servants)
+        })
+    }
+
+
+
+
 
 }
