@@ -41,6 +41,7 @@ class ServantFullInfoAdapter (private var servants: List<Servant>) : RecyclerVie
 
     inner class ServantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        private val idFull: TextView = itemView.findViewById(R.id.tvServantFullInfoId)
         private val imageFullView: ImageView = itemView.findViewById(R.id.ivFullInfoImage)
         private val nameFullTextView: TextView = itemView.findViewById(R.id.tvServantFullInfoName)
         private val rarityFullTextView: RatingBar = itemView.findViewById(R.id.rbRarity)
@@ -58,6 +59,7 @@ class ServantFullInfoAdapter (private var servants: List<Servant>) : RecyclerVie
         fun bindFullInfo(servant: Servant) {
 
 
+            idFull.text = servant.id.toString()
             nameFullTextView.text = servant.name
             rarityFullTextView.rating = servant.rarity.toFloat()
             classFullTextView.text = servant.className
