@@ -361,3 +361,7 @@ w
 Gapp/src/main/java/com/example/proyectofinal/ui/login/WelcomeActivity.kt,5\b\5b0b00a1c7b5d39b3d99627d7540c98e50c8ddb1
 }
 Mapp/src/main/java/com/example/proyectofinal/adapter/ServantFullInfoAdapter.kt,7\d\7da039502f0bc687adf741e3e1422cf74e77d15b
+u
+Eapp/src/main/java/com/example/proyectofinal/ui/login/AyudaActivity.kt,8\e\8e8043fd197af36d3d55bff5a732186a6e27a56b
+x
+Happ/src/main/java/com/example/proyectofinal/ui/login/AcercaDeActivity.kt,2\c\2c90b4e7880897a1cb3624dcedddcf7892ef0568

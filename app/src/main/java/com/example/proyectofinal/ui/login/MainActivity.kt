@@ -31,20 +31,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
 
         val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_gameData, R.id.navigation_notifications)
-        )
+            setOf(R.id.navigation_home, R.id.navigation_gameData, R.id.navigation_notifications))
+
 
 
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             if (destination.id == R.id.navigation_notifications) {
                 startActivity(Intent(this, LoginActivity::class.java))
             }
+
+
         }
 
 
@@ -69,9 +71,28 @@ class MainActivity : AppCompatActivity() {
                 auth.signOut()
                 finish()
             }
+            R.id.btAyuda -> {
+            startHelp()
+            return true
+        }
+            R.id.btAcercaDe -> {
+                val intent = Intent(this, AcercaDeActivity::class.java)
+                startActivity(intent)
+                return true
+            }
         }
 
         return super.onOptionsItemSelected(item)
     }
+
+    private fun startHelp() {
+        val intent = Intent(this, AyudaActivity::class.java)
+        startActivity(intent)
+        finish()
+
+    }
+
+
+
 
 }
