@@ -11,19 +11,7 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel (application: Application): AndroidViewModel(application) {
 
-    val servantsLiveData:LiveData<MutableList<Servant>>
 
-    init {
-        Repository(application)
-
-        servantsLiveData = Repository.getLiveDataListaServants()
-        getNextServant()
-
-    }
-
-    fun getNextServant() = viewModelScope.launch(Dispatchers.IO) {
-        Repository.getNextServantsWithImages()
-    }
 
 
 }
